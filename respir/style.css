@@ -1,0 +1,138 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --text-color: #2d3436;
+    --primary-color: #6c5ce7;
+    --secondary-color: #00cec9;
+    --stop-color: #ff7675;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.inputs-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.input-group label {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #636e72;
+    font-weight: 600;
+}
+
+.timer-display {
+    font-size: 5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-color);
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.buttons-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    flex: 1;
+    max-width: 120px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-start {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+}
+
+.btn-stop {
+    background: var(--stop-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 118, 117, 0.4);
+}
+
+/* Chrome, Safari, Edge, Opera - hide number spinner */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.active-phase input {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.4);
+    transform: scale(1.05);
+}
+
+.active-phase label {
+    color: var(--primary-color);
+    font-weight: 700;
+}

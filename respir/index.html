@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер дыхания</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputs-row">
+            <div class="input-group">
+                <input type="number" id="inputMin" placeholder="00" min="0">
+                <label>мин</label>
+            </div>
+            <div class="input-group">
+                <input type="number" id="inputSec1" placeholder="00" min="0">
+                <label>сек</label>
+            </div>
+            <div class="input-group">
+                <input type="number" id="inputSec2" placeholder="00" min="0">
+                <label>сек</label>
+            </div>
+        </div>
+
+        <div class="timer-display" id="timerDisplay">00</div>
+
+        <div class="buttons-row">
+            <button id="startBtn" class="btn btn-start">Старт</button>
+            <button id="stopBtn" class="btn btn-stop">Стоп</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
